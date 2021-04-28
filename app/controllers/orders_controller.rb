@@ -17,7 +17,8 @@ class OrdersController < ApplicationController
       # redirect_to orders_new_path(@order)
     else 
       #error message
-      #if it doenst save @order.error 
+      #if it doenst save @order.error
+      
       render :new
     end
   end 
@@ -30,7 +31,7 @@ class OrdersController < ApplicationController
   end
 
   def edit
-    @order= Order.find_by(id: arams[:id])
+    @order= Order.find_by(id: params[:id])
     
   end
 
